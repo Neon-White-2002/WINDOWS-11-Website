@@ -64,7 +64,7 @@ const feel_like = document.getElementById("feels_like");
 const user_location = document.getElementById("user-current-location");
 
 // API-KEY (OPEN WEATHER)
-let API_Key = "576b39c9be8cede3a8038ec4f341d678";
+let API_Key = "API-KEY";
 
 function user_current_location()
 {
