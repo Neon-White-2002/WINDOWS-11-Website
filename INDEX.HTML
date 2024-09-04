@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- STYLE-SHEET -->
+        <link rel="stylesheet" href="STYLE.CSS">
+
+        <!-- FONT-AWESOME -->
+        <script src="https://kit.fontawesome.com/4712b32a59.js" crossorigin="anonymous"></script>
+
+        <!-- PAGE-LOGO -->
+        <link rel="icon" href="WINDOWS 11 (ICONS)/windows-10.png" type="img/icon">
+        
+        <title>Welcome to, WINDOWS-11</title>
+    </head>
+    
+    <body onload="user_current_location() + update_time_and_date()">
+        <!-- WINDOWS-11 -->
+        <div class="main-container dark" id="main-container">
+            <!-- APPLICATION & SOFTWARE -->
+            <div class="application-container">
+                <div class="application-list" id="application-list">
+                    <!-- SOFTWARE-APPLICATON -->
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/user-folder.png" alt="">
+                        </div>
+
+                        <span>Neekunj Chauhan</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/pc.png" alt="">
+                        </div>
+
+                        <span>This PC</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/recycle-bin.png" alt="">
+                        </div>
+
+                        <span>Re-cycle Bin</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/control-panel.png" alt="">
+                        </div>
+
+                        <span>Control Panel</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/microsoft-edge.png" alt="">
+                        </div>
+
+                        <span>Microsoft Edge</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/brave.png" alt="">
+                        </div>
+
+                        <span>Brave</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/chrome.png" alt="">
+                        </div>
+
+                        <span>Google Chrome</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/steam.png" alt="">
+                        </div>
+
+                        <span>Steam</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/visual-studio-code.png" alt="">
+                        </div>
+
+                        <span>Visual Studio Code</span>
+                    </div>
+
+                    <div class="software-container">
+                        <div class="software-container-bg">
+                            <img src="WINDOWS 11 (ICONS)/folder.png" alt="">
+                        </div>
+
+                        <span>HTML & CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TASK-BAR -->
+            <div class="task-bar">
+                <!-- WEATHER-INFO -->
+                <div class="weather-info">
+                    <div class="weather-status-info">
+                        <div class="weather-icon">
+                            <img id="weather-icon-img" src="" alt="">
+                        </div>
+
+                        <div class="weather-status-text">
+                            <p id="temperature"><!-- JAVA-SCRIPT --></p>
+                            <span id="feels_like"><!-- JAVA-SCRIPT --></span>
+                        </div>
+
+                        <div class="user-location-container">
+                            <div class="user-location-icon">
+                                <img src="WINDOWS 11 (ICONS)/location.png" alt="">
+                            </div>
+
+                            <div class="user-location-status">
+                                <span id="user-current-location"><!-- JAVA-SCRIPT --></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APP-ICONS -->
+                <div class="app-icons">
+                    <div class="app-icon-button" id="windows-start-button">
+                        <img src="WINDOWS 11 (ICONS)/windows-11.png" alt="">
+                    </div>
+
+                    <div class="app-icon-button">
+                        <img src="WINDOWS 11 (ICONS)/search.png" alt="">
+                    </div>
+
+                    <div class="app-icon-button">
+                        <img src="WINDOWS 11 (ICONS)/microsoft-edge.png" alt="">
+                    </div>
+
+                    <div class="app-icon-button">
+                        <img src="WINDOWS 11 (ICONS)/microsoft-onedrive.png" alt="">
+                    </div>
+
+                    <div class="app-icon-button">
+                        <img src="WINDOWS 11 (ICONS)/file-explorer.png" alt="">
+                    </div>
+
+                    <div class="app-icon-button">
+                        <img src="WINDOWS 11 (ICONS)/settings.png" alt="">
+                    </div>
+
+                    <div class="app-icon-button">
+                        <img src="WINDOWS 11 (ICONS)/microsoft-store.png" alt="">
+                    </div>
+
+                    <div class="app-icon-button">
+                        <img src="WINDOWS 11 (ICONS)/start-menu.png" alt="">
+                    </div>
+                </div>
+
+                <!-- TASK-BAR-ICONS -->
+                <div class="task-bar-icons">
+                    <div class="task-bar-icon-button">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+
+                    <div class="task-bar-icon-button">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+
+                    <div class="task-bar-icon-button">
+                        <i class="fa-solid fa-battery-full"></i>
+                    </div>
+
+                    <div class="task-bar-icon-button">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
+
+                    <div class="task-bar-icon-language">
+                        <p>ENG</p>
+                    </div>
+
+                    <div class="task-bar-icon-date-and-time">
+                        <span class="time" id="time"><!-- JAVA-SCRIPT --></span>
+                        <span class="date" id="date"><!-- JAVA-SCRIPT --></span>
+                    </div>
+
+                    <div class="task-bar-icon-button">
+                        <i class="fa-solid fa-message"></i>
+                        <div class="notification-alert">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WINDOWS-START-MENU -->
+            <div class="windows-start-menu" id="windows-start-menu">
+                <div class="windows-start-menu-search-bar">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" name="" id="" placeholder="Type, Here To Search...">
+                    </div>
+                </div>
+
+                <div class="pinned-items-container">
+                    <div class="pinned-items-text">
+                        <p>Pinned's</p>
+
+                        <button>All App's <i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+
+                    <div class="pinned-items-list" id="pinned-items-list">
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-edge.png" alt="">
+                            </div>
+
+                            <span>Edge</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-word.png" alt="">
+                            </div>
+
+                            <span>Word</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-powerpoint.png" alt="">
+                            </div>
+
+                            <span>Power Point</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-excel.png" alt="">
+                            </div>
+
+                            <span>Excel</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-onenote.png" alt="">
+                            </div>
+
+                            <span>OneNote</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/mail.png" alt="">
+                            </div>
+
+                            <span>Mail</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-store.png" alt="">
+                            </div>
+
+                            <span>Store</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/photos.png" alt="">
+                            </div>
+
+                            <span>Photos</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/your-help.png" alt="">
+                            </div>
+
+                            <span>Phone</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/snip-sketch.png" alt="">
+                            </div>
+
+                            <span>Snipping Tool</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/pinterest.png" alt="">
+                            </div>
+
+                            <span>Pinterest</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/calculator.png" alt="">
+                            </div>
+
+                            <span>Calculator</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/calendar.png" alt="">
+                            </div>
+
+                            <span>Calendar</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-access.png" alt="">
+                            </div>
+
+                            <span>Access</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-teams.png" alt="">
+                            </div>
+
+                            <span>Teams</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-solitaire-collection.png" alt="">
+                            </div>
+
+                            <span>Solitaire</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/google-play.png" alt="">
+                            </div>
+
+                            <span>Google Play Store</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-outlook.png" alt="">
+                            </div>
+
+                            <span>Outlook</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-paint.png" alt="">
+                            </div>
+
+                            <span>Paint</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/microsoft-office.png" alt="">
+                            </div>
+
+                            <span>Office</span>
+                        </div>
+
+                        <div class="pinned-item-view">
+                            <div class="pinned-item-image">
+                                <img src="WINDOWS 11 (ICONS)/paint-3d.png" alt="">
+                            </div>
+
+                            <span>Paint 3D</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommanded-container">
+                    <div class="recommanded-container-text">
+                        <p>Recommended</p>
+
+                        <button>More <i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+
+                    <div class="recommended-list-container" id="recommended-list-container">
+                        <div class="recommended-view">
+                            <div class="recommended-view-img">
+                                <img src="WINDOWS 11 (ICONS)/xbox.png" alt="">
+                            </div>
+
+                            <div class="recommended-view-text">
+                                <p>Xbox</p>
+                                <span>Recently Added</span>
+                            </div>
+                        </div>
+
+                        <div class="recommended-view">
+                            <div class="recommended-view-img">
+                                <img src="WINDOWS 11 (ICONS)/nvidia.png" alt="">
+                            </div>
+
+                            <div class="recommended-view-text">
+                                <p>Nvidia</p>
+                                <span>Recently Added</span>
+                            </div>
+                        </div>
+
+                        <div class="recommended-view">
+                            <div class="recommended-view-img">
+                                <img src="WINDOWS 11 (ICONS)/notepad.png" alt="">
+                            </div>
+
+                            <div class="recommended-view-text">
+                                <p>INDEX.HTML</p>
+                                <span>10 Feb, 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="recommended-view">
+                            <div class="recommended-view-img">
+                                <img src="WINDOWS 11 (ICONS)/word-file.png" alt="">
+                            </div>
+
+                            <div class="recommended-view-text">
+                                <p>HTML & CSS (Project)</p>
+                                <span>25 Feb, 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="recommended-view">
+                            <div class="recommended-view-img">
+                                <img src="WINDOWS 11 (ICONS)/pdf-file.png" alt="">
+                            </div>
+
+                            <div class="recommended-view-text">
+                                <p>React-Native (DOC)</p>
+                                <span>27 Feb, 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="recommended-view">
+                            <div class="recommended-view-img">
+                                <img src="WINDOWS 11 (ICONS)/power-point-file.png" alt="">
+                            </div>
+
+                            <div class="recommended-view-text">
+                                <p>Crypto-Currency</p>
+                                <span>1 Mar, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widnows-user-account-container">
+                    <div class="user-account-container">
+                        <div class="user-account-view">
+                            <div class="user-account-img">
+                                <img src="WINDOWS 11 (ICONS)/neeku-pprofile-pic.jpg" alt="">
+                            </div>
+
+                            <p>Neekunj Chauhan</p>
+                        </div>
+
+                        <div class="windows-theme-view">
+                            <div class="theme-icon" id="theme-icon">
+                                <i class="fa-solid fa-moon"></i>
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+
+                            <div class="theme-bg" id="theme-bg">
+                                <span id="theme-controller"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shut-down-container">
+                        <i class="fa-solid fa-power-off"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JAVA-SCRIPT -->
+        <script src="JAVA-SCRIPT/JAVA-SCRIPT.JS"></script>
+    </body>
+</html>

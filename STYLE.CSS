@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root
+{
+    /* ----- COLORS ----- */
+    --body-color : #EFEFEF;
+    --sidebar-color : #FFF;
+    --primary-color-light : #F6F5FF;
+    --toggle-color : #DDD;
+    --text-color : #18191A;
+    --sub-text-color : #CCC;
+    --message-background : #242526;
+    --hover-effect : rgba(0, 0, 0, 0.1);
+    --blur-background : rgba(255, 255, 255, 0.15);
+    --sub-shadow : 0 0 5px rgba(0, 0, 0, 0.5);
+    --shadow : 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5);
+    --border-bottom-view : rgba(0, 0, 0, 0.1);
+}
+
+.main-container.dark
+{
+    /* ----- COLORS ----- */
+    --body-color : #18191A;
+    --sidebar-color : #242526;
+    --primary-color-light : #3A3B3C;
+    --toggle-color : #DDD;
+    --text-color : #DDD;
+    --sub-text-color : #CCC;
+    --message-background : #F6F5FF;
+    --hover-effect : rgba(255, 255, 255, 0.15);
+    --blur-background : rgba(0, 0, 0, 0.5);
+    --shadow : 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5);
+    --border-bottom-view : rgba(255, 255, 255, 0.1);
+}
+
+/* MAIN-CONTAINER */
+.main-container
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url(windows-11-dark.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+/*  APPLICATION-CONTAINER */
+.main-container .application-container
+{
+    width: 100%;
+    height: 93%;
+}
+
+.main-container .application-container .application-list
+{
+    width: fit-content;
+    height: 100%;
+    padding: 0.3rem;
+    gap: 0.35rem 0.05rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* SOFTWARE-CONTAINER */
+.main-container .application-container .application-list .software-container
+{
+    width: 6.5rem;
+    height: 5.5rem;
+    padding: 0.15rem 0.3rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.main-container .application-container .application-list .software-container.active-software
+{
+    gap: 0.25rem;
+    background: var(--hover-effect);
+}
+
+.main-container .application-container .application-list .software-container.active-software span
+{
+    width: 100%;
+    white-space: wrap;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.main-container .application-container .application-list .software-container:hover
+{
+    background: var(--hover-effect);
+}
+
+.main-container .application-container .application-list .software-container .software-container-bg
+{
+    width: 100%;
+    height: 3.0rem;
+}
+
+.main-container .application-container .application-list .software-container .software-container-bg img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-container .application-container .application-list .software-container span
+{
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* TASK-BAR */
+.main-container .task-bar
+{
+    position: relative;
+    width: 100%;
+    height: 7%;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--blur-background);
+    backdrop-filter: blur(0.35rem);
+}
+
+/* TASK-BAR (WEATHER-INFO) */
+.main-container .task-bar .weather-info
+{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-container .task-bar .weather-info .weather-status-info,
+.main-container .task-bar .weather-info .weather-status-info .user-location-container
+{
+    width: auto;
+    height: 100%;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .task-bar .weather-info .weather-status-info:hover
+{
+    background: var(--hover-effect);
+    transform: scale(0.95);
+}
+
+.main-container .task-bar .weather-info .weather-status-info .weather-icon
+{
+    width: 2.5rem;
+    height: 100%;
+    margin-right: 0.35rem;
+}
+
+.main-container .task-bar .weather-info .weather-status-info .weather-icon img,
+.main-container .task-bar .weather-info .weather-status-info .user-location-container .user-location-icon img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(var(--shadow));
+}
+
+.main-container .task-bar .weather-info .weather-status-info .weather-status-text
+{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.10rem;
+}
+
+.main-container .task-bar .weather-info .weather-status-info .weather-status-text p
+{
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.main-container .task-bar .weather-info .weather-status-info .weather-status-text span
+{
+    font-size: 0.95rem;
+    font-weight: 100;
+    color: var(--text-color);
+}
+
+.main-container .task-bar .weather-info .weather-status-info .user-location-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0.35rem;
+}
+
+.main-container .task-bar .weather-info .weather-status-info .user-location-container .user-location-icon
+{
+    width: 2.0rem;
+    height: 100%;
+    margin-right: 0.15rem;
+}
+
+.main-container .task-bar .weather-info .weather-status-info .user-location-container .user-location-status span
+{
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* TASK-BAR (APP'S ICON) */
+.main-container .task-bar .app-icons
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.main-container .task-bar .app-icons .app-icon-button
+{
+    width: 3.0rem;
+    height: 100%;
+    border-radius: 0.3rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .task-bar .app-icons .app-icon-button:hover
+{
+    background: var(--hover-effect);
+    transform: scale(0.95);
+}
+
+.main-container .task-bar .app-icons .app-icon-button img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* TASK-BAR (ICONS) */
+.main-container .task-bar .task-bar-icons
+{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-button
+{
+    position: relative;
+    width: 2.15rem;
+    height: 100%;
+    padding: 0.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-button:hover
+{
+    background: var(--hover-effect);
+    transform: scale(0.95);
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-button i
+{
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-button i.fa-message
+{
+    font-size: 1.15rem;
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-button .notification-alert
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    position: absolute;
+    top: 5.5%;
+    right: 0;
+    width: 1.15rem;
+    height: 1.15rem;
+    font-size: 0.55rem;
+    font-weight: 700;
+    border-radius: 50%;
+    background: var(--body-color);
+    color: var(--text-color);
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-language
+{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem;
+    border-radius: 0.3rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-language p
+{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-language:hover
+{
+    background: var(--hover-effect);
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-date-and-time
+{
+    width: auto;
+    height: 100%;
+    margin: 0 0.55rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.main-container .task-bar .task-bar-icons .task-bar-icon-date-and-time span.time,
+.main-container .task-bar .task-bar-icons .task-bar-icon-date-and-time span.date
+{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* WINDOWS-START-MENU */
+.main-container .windows-start-menu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 40rem;
+    height: 45em;
+    bottom: 7.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blur-background);
+    border-radius: 0.3rem;
+    backdrop-filter: blur(0.35rem);
+    overflow: hidden;
+    animation: start-menu 1.5s ease-in-out;
+    display: none;
+}
+
+.main-container .windows-start-menu.active-start-menu
+{
+    display: flex;
+}
+
+@keyframes start-menu
+{
+    0%
+    {
+        bottom: 5.5%;
+    }
+}
+
+.main-container .windows-start-menu .windows-start-menu-search-bar
+{
+    width: 100%;
+    padding: 1.55rem 1.55rem;
+}
+
+.main-container .windows-start-menu .windows-start-menu-search-bar .search-bar
+{
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1.05rem;
+    gap: 0.5rem;
+    border-radius: 5.55rem;
+    background: var(--primary-color-light);
+    filter: drop-shadow(var(--shadow));
+    border-bottom: 0.10rem solid #08A1F7;
+}
+
+.main-container .windows-start-menu .windows-start-menu-search-bar .search-bar i
+{
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.main-container .windows-start-menu .windows-start-menu-search-bar .search-bar input
+{
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: transparent;
+}
+
+/* PINNED & RECOMMENDED (CONTAINER) */
+.main-container .windows-start-menu .pinned-items-container,
+.main-container .windows-start-menu .recommanded-container
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 2.55rem;
+    margin: 0.55rem 0;
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-text,
+.main-container .windows-start-menu .recommanded-container .recommanded-container-text
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-text p,
+.main-container .windows-start-menu .recommanded-container .recommanded-container-text p
+{
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-text button,
+.main-container .windows-start-menu .recommanded-container .recommanded-container-text button
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.15rem;
+    color: var(--text-color);
+    background: var(--blur-background);
+    filter: drop-shadow(var(--shadow));
+    cursor: pointer;
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-list
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.7rem 0.5rem;
+    width: 100%;
+    height: 15rem;
+    padding: 0.25rem 0.05rem;
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-list .pinned-item-view
+{
+    width: 4.5rem;
+    height: 4.5rem;
+    gap: 0.35rem;
+    padding: 0 0.15rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-list .pinned-item-view.active-pinned-app
+{
+    gap: 0.25rem;
+    background: var(--hover-effect);
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-list .pinned-item-view.active-pinned-app span
+{
+    width: 100%;
+    white-space: wrap;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-list .pinned-item-view:hover
+{
+    background: var(--hover-effect);
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-list .pinned-item-view .pinned-item-image
+{
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-list .pinned-item-view .pinned-item-image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-container .windows-start-menu .pinned-items-container .pinned-items-list .pinned-item-view span
+{
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.0rem;
+    width: 100%;
+    padding: 0.25rem 0.05rem;
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container .recommended-view
+{
+    width: 50%;
+    height: fit-content;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container .recommended-view.active-recommended-view
+{
+    background: var(--hover-effect);
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container .recommended-view:hover
+{
+    background: var(--hover-effect);
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container .recommended-view .recommended-view-img
+{
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container .recommended-view .recommended-view-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container .recommended-view .recommended-view-text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container .recommended-view .recommended-view-text p
+{
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.main-container .windows-start-menu .recommanded-container .recommended-list-container .recommended-view .recommended-view-text span
+{
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--sub-text-color);
+}
+
+/* WINDOWS-ACCOUNT-CONTAINER */
+.main-container .windows-start-menu .widnows-user-account-container
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3.3rem;
+    padding: 0.5rem 2.55rem;
+    background: var(--blur-background);
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .user-account-view
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.15rem 0.3rem;
+    gap: 0.35rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .user-account-view:hover
+{
+    background: var(--hover-effect);
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .user-account-view .user-account-img
+{
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: drop-shadow(var(--shadow));
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .user-account-view .user-account-img img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .user-account-view p
+{
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* WINDOWS-THEME-VIEW */
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view
+{
+    width: auto;
+    height: 1.75rem;
+    padding: 0.25rem;
+    gap: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0.3rem;
+    background: var(--hover-effect);
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-icon
+{
+    position: relative;
+    width: 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-icon i
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-icon i.fa-sun
+{
+    opacity: 0;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-icon.light-theme i.fa-moon
+{
+    opacity: 0;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-icon.light-theme .fa-sun
+{
+    opacity: 100;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-icon.dark-theme .fa-sun
+{
+    opacity: 0;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-icon.dark-theme .fa-moon
+{
+    opacity: 100;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-bg
+{
+    position: relative;
+    width: 2.5rem;
+    height: 100%;
+    border-radius: 1.5rem;
+    background: var(--primary-color-light);
+    cursor: pointer;
+}
+
+.main-container .windows-start-menu .widnows-user-account-container .user-account-container .windows-theme-view .theme-bg span
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.27rem;
+    width: 0.90rem;
+    height: 0.90rem;
+    border-radius: 50%;
+    background: var(--toggle-color);
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .windows-start-menu .shut-down-container
+{
+    width: 2.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem;
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: 0.5s ease-in-out;
+}
+
+.main-container .windows-start-menu .shut-down-container:hover
+{
+    background: var(--hover-effect);
+}
